@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ChanceBalancer</string>
+    <string name="name">Name</string>
+    <string name="attack">Attack</string>
+    <string name="chance">chance</string>
+    <string name="damage">damage</string>
+    <string name="defence">Defence</string>
+    <string name="amount">amount</string>
+    <string name="armor">Armor</string>
+    <string name="add">+</string>
+</resources>
