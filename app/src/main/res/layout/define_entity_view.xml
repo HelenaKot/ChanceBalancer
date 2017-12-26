@@ -49,6 +49,7 @@
             android:text="@string/defence" />
 
         <EditText
+            android:id="@+id/input_def_chance"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -56,10 +57,11 @@
             android:inputType="number" />
 
         <EditText
+            android:id="@+id/input_def_times"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="@string/amount"
+            android:hint="@string/times"
             android:inputType="number" />
 
     </LinearLayout>
@@ -72,19 +74,23 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/armor" />
+            android:text="@string/health" />
 
         <EditText
+            android:id="@+id/input_hp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/amount"
             android:inputType="number" />
 
-        <android.support.v4.widget.Space
+        <EditText
+            android:id="@+id/input_armor"
             android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1" />
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/armor"
+            android:inputType="number" />
 
     </LinearLayout>
 

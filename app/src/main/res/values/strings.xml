@@ -6,6 +6,8 @@
     <string name="damage">damage</string>
     <string name="defence">Defence</string>
     <string name="amount">amount</string>
-    <string name="armor">Armor</string>
+    <string name="times">times</string>
+    <string name="health">Health</string>
+    <string name="armor">armor</string>
     <string name="add">+</string>
 </resources>
