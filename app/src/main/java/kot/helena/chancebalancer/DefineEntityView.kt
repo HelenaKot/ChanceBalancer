@@ -11,6 +11,7 @@ import kotlinx.android.synthetic.main.define_entity_view.view.*
 
 class DefineEntityView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyle: Int = 0)
     : CardView(context, attrs, defStyle) {
+    private val nameField: EditText by lazy { input_name }
     private val attackChanceField: EditText by lazy { input_atk_chance }
     private val attackDamageField: EditText by lazy { input_atc_dmg }
     private val defenceChanceField: EditText by lazy { input_def_chance }
@@ -22,6 +23,7 @@ class DefineEntityView @JvmOverloads constructor(context: Context, attrs: Attrib
 
     init {
         LayoutInflater.from(context).inflate(R.layout.define_entity_view, this, true)
+        nameField.afterTextChanged { input -> model.name = input }
         attackChanceField.afterTextChanged { input -> model.attackChance = input.toInt() }
         attackDamageField.afterTextChanged { input -> model.attackDamage = input.toInt() }
         defenceChanceField.afterTextChanged { input -> model.defenceChance = input.toInt() }
