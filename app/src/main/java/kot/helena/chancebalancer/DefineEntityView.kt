@@ -1,14 +1,12 @@
 package kot.helena.chancebalancer
 
-import android.app.Activity
 import android.content.Context
-import android.databinding.DataBindingUtil
 import android.support.v7.widget.CardView
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.AttributeSet
+import android.view.LayoutInflater
 import android.widget.EditText
-import kot.helena.chancebalancer.databinding.DefineEntityViewBinding
 import kotlinx.android.synthetic.main.define_entity_view.view.*
 
 class DefineEntityView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyle: Int = 0)
@@ -23,7 +21,7 @@ class DefineEntityView @JvmOverloads constructor(context: Context, attrs: Attrib
     private val model: EntityModel = EntityModel()
 
     init {
-        val binding: DefineEntityViewBinding = DataBindingUtil.setContentView(this.context as Activity, R.layout.define_entity_view)
+        LayoutInflater.from(context).inflate(R.layout.define_entity_view, this, true)
         attackChanceField.afterTextChanged { input -> model.attackChance = input.toInt() }
         attackDamageField.afterTextChanged { input -> model.attackDamage = input.toInt() }
         defenceChanceField.afterTextChanged { input -> model.defenceChance = input.toInt() }
