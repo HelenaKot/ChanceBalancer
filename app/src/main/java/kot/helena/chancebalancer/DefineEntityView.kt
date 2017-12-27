@@ -19,7 +19,7 @@ class DefineEntityView @JvmOverloads constructor(context: Context, attrs: Attrib
     private val healthField: EditText by lazy { input_hp }
     private val armorField: EditText by lazy { input_armor }
 
-    private val model: EntityModel = EntityModel()
+    val model: EntityModel = EntityModel()
 
     init {
         LayoutInflater.from(context).inflate(R.layout.define_entity_view, this, true)
