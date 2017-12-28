@@ -25,11 +25,6 @@ class SelectEntityActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         val adapter = DisplayEntityAdapter()
         recyclerView.adapter = adapter
-
-        val data = ArrayList<EntityModel>()
-        data.add(EntityModel())
-        data.add(EntityModel())
-
         adapter.setData(EntityRW.loadEntities(this))
     }
 
