@@ -1,11 +1,14 @@
 package kot.helena.chancebalancer.display
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import kot.helena.chancebalancer.EntityModel
 import kot.helena.chancebalancer.R
+import kot.helena.chancebalancer.define.DefineEntityActivity
+import kot.helena.chancebalancer.utils.EntityRW
 import kotlinx.android.synthetic.main.activity_main.*
 
 class SelectEntityActivity : AppCompatActivity() {
@@ -15,6 +18,7 @@ class SelectEntityActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initRecyclerView()
+        startDefineEntityActivity()
     }
 
     private fun initRecyclerView() {
@@ -26,7 +30,11 @@ class SelectEntityActivity : AppCompatActivity() {
         data.add(EntityModel())
         data.add(EntityModel())
 
-        adapter.setData(data)
+        adapter.setData(EntityRW.loadSerializable(this))
+    }
+
+    private fun startDefineEntityActivity() {
+        startActivity(Intent(this, DefineEntityActivity::class.java))
     }
 
 }

@@ -1,11 +1,12 @@
 package kot.helena.chancebalancer.define
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.widget.Button
 import android.widget.LinearLayout
 import kot.helena.chancebalancer.EntityModel
 import kot.helena.chancebalancer.R
+import kot.helena.chancebalancer.utils.EntityRW
 import kotlinx.android.synthetic.main.activity_define_entity.*
 
 class DefineEntityActivity : AppCompatActivity() {
@@ -18,11 +19,16 @@ class DefineEntityActivity : AppCompatActivity() {
         setContentView(R.layout.activity_define_entity)
         addEntityView()
         button.setOnClickListener({ addEntityView() })
-        finishButton.setOnClickListener({ collectEntities() })
+        finishButton.setOnClickListener({ this.finish() })
     }
 
     private fun addEntityView() {
         container.addView(DefineEntityView(this))
+    }
+
+    override fun finish() {
+        EntityRW.saveSerializable(collectEntities(), this)
+        super.finish()
     }
 
     private fun collectEntities(): List<EntityModel> {
