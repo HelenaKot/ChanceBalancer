@@ -1,4 +1,4 @@
-package kot.helena.chancebalancer
+package kot.helena.chancebalancer.define
 
 import android.content.Context
 import android.support.v7.widget.CardView
@@ -7,6 +7,8 @@ import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.EditText
+import kot.helena.chancebalancer.EntityModel
+import kot.helena.chancebalancer.R
 import kotlinx.android.synthetic.main.define_entity_view.view.*
 
 class DefineEntityView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyle: Int = 0)

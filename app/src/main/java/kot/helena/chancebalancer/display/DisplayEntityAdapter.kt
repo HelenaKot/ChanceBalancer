@@ -1,9 +1,10 @@
-package kot.helena.chancebalancer
+package kot.helena.chancebalancer.display
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kot.helena.chancebalancer.EntityModel
 import kot.helena.chancebalancer.databinding.DisplayEntityViewBinding
 import kotlin.properties.Delegates
 

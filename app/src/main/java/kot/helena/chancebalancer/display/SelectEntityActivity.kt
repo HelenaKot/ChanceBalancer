@@ -1,13 +1,15 @@
-package kot.helena.chancebalancer
+package kot.helena.chancebalancer.display
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import kot.helena.chancebalancer.EntityModel
+import kot.helena.chancebalancer.R
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
-    val recyclerView: RecyclerView by lazy { recycler_view }
+class SelectEntityActivity : AppCompatActivity() {
+    private val recyclerView: RecyclerView by lazy { recycler_view }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
