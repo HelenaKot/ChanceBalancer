@@ -30,7 +30,7 @@ class SelectEntityActivity : AppCompatActivity() {
         data.add(EntityModel())
         data.add(EntityModel())
 
-        adapter.setData(EntityRW.loadSerializable(this))
+        adapter.setData(EntityRW.loadEntities(this))
     }
 
     private fun startDefineEntityActivity() {

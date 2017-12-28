@@ -27,7 +27,7 @@ class DefineEntityActivity : AppCompatActivity() {
     }
 
     override fun finish() {
-        EntityRW.saveSerializable(collectEntities(), this)
+        EntityRW.saveEntities(collectEntities(), this)
         super.finish()
     }
 
