@@ -10,7 +10,14 @@ import java.io.ObjectOutputStream
 
 object EntityRW {
 
-    fun saveEntities(args: List<EntityModel>, context: Context) {
+    fun addSavedEntities(args: List<EntityModel>, context: Context) {
+        val sumList = ArrayList<EntityModel>()
+        sumList.addAll(loadEntities(context))
+        sumList.addAll(args)
+        saveEntities(sumList, context)
+    }
+
+    private fun saveEntities(args: List<EntityModel>, context: Context) {
         val fos: FileOutputStream = context.openFileOutput(context.getString(R.string.save_name), Context.MODE_PRIVATE)
         val oos = ObjectOutputStream(fos)
         oos.writeObject(args)

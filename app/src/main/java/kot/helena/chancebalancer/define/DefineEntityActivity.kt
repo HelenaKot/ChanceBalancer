@@ -27,7 +27,7 @@ class DefineEntityActivity : AppCompatActivity() {
     }
 
     override fun finish() {
-        EntityRW.saveEntities(collectEntities(), this)
+        EntityRW.addSavedEntities(collectEntities(), this)
         super.finish()
     }
 
