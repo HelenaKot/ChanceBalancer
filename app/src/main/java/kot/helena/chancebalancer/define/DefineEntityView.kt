@@ -26,12 +26,17 @@ class DefineEntityView @JvmOverloads constructor(context: Context, attrs: Attrib
     init {
         LayoutInflater.from(context).inflate(R.layout.define_entity_view, this, true)
         nameField.afterTextChanged { input -> model.name = input }
-        attackChanceField.afterTextChanged { input -> model.attackChance = input.toInt() }
-        attackDamageField.afterTextChanged { input -> model.attackDamage = input.toInt() }
-        defenceChanceField.afterTextChanged { input -> model.defenceChance = input.toInt() }
-        defenceTimesField.afterTextChanged { input -> model.defenceTimes = input.toInt() }
-        healthField.afterTextChanged { input -> model.health = input.toInt() }
-        armorField.afterTextChanged { input -> model.armor = input.toInt() }
+        attackChanceField.afterTextChanged { input -> model.attackChance = input.safeFormatInt() }
+        attackDamageField.afterTextChanged { input -> model.attackDamage = input.safeFormatInt() }
+        defenceChanceField.afterTextChanged { input -> model.defenceChance = input.safeFormatInt() }
+        defenceTimesField.afterTextChanged { input -> model.defenceTimes = input.safeFormatInt() }
+        healthField.afterTextChanged { input -> model.health = input.safeFormatInt() }
+        armorField.afterTextChanged { input -> model.armor = input.safeFormatInt() }
+    }
+
+    private fun String.safeFormatInt(): Int {
+        if (this.isBlank()) return 0
+        return this.toInt()
     }
 
     private fun EditText.afterTextChanged(afterTextChanged: (String) -> Unit) {
