@@ -15,6 +15,10 @@ class DisplayEntityAdapter : RecyclerView.Adapter<DisplayEntityAdapter.EntityVie
         this.data = data
     }
 
+    fun isEmpty(): Boolean {
+        return data.isEmpty()
+    }
+
     override fun onBindViewHolder(holder: EntityViewHolder, position: Int) {
         holder.bind(data[position])
     }

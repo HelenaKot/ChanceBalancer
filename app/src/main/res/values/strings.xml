@@ -9,7 +9,8 @@
     <string name="times">times</string>
     <string name="health">Health</string>
     <string name="armor">armor</string>
-    <string name="add">+</string>
+    <string name="add">add</string>
     <string name="ok">OK</string>
     <string name="save_name">saved_entities</string>
+    <string name="delete">delete</string>
 </resources>
