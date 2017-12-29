@@ -3,7 +3,6 @@ package kot.helena.chancebalancer.define
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.v7.app.AppCompatActivity
-import android.widget.Button
 import android.widget.LinearLayout
 import kot.helena.chancebalancer.EntityModel
 import kot.helena.chancebalancer.R
@@ -38,7 +37,8 @@ class DefineEntityActivity : AppCompatActivity() {
 
     private fun collectEntities(): List<EntityModel> {
         val outputList: ArrayList<EntityModel> = ArrayList()
-        (0 until container.childCount).mapTo(outputList) { (container.getChildAt(it) as DefineEntityView).model }
+        (0 until container.childCount).map { (container.getChildAt(it) as DefineEntityView).model }
+                .filterTo(outputList) { it.notEmpty() }
         return outputList
     }
 
