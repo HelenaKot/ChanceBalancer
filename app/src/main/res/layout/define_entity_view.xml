@@ -1,97 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
-
-    <EditText
-        android:id="@+id/input_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/name" />
+    android:layout_margin="@dimen/margin_component">
 
     <LinearLayout
+        style="@style/textContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/attack" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/input_atk_chance"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/chance"
-            android:inputType="number" />
+            <EditText
+                android:id="@+id/input_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/name" />
 
-        <EditText
-            android:id="@+id/input_atc_dmg"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/damage"
-            android:inputType="number" />
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/input_unique"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unique" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/inputLabel"
+                android:text="@string/attack" />
+
+            <ImageView
+                style="@style/icon"
+                android:src="@drawable/ic_crosshair" />
+
+            <EditText
+                android:id="@+id/input_atk_chance"
+                style="@style/inputEditText"
+                android:layout_width="@dimen/define_edit_text_row_length"
+                android:layout_height="wrap_content"
+                android:hint="@string/chance"
+                android:inputType="number" />
+
+            <ImageView
+                style="@style/icon"
+                android:src="@drawable/ic_sword" />
+
+            <EditText
+                android:id="@+id/input_atc_dmg"
+                style="@style/inputEditText"
+                android:layout_width="@dimen/define_edit_text_row_length"
+                android:layout_height="wrap_content"
+                android:hint="@string/damage"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/inputLabel"
+                android:text="@string/defence" />
+
+            <ImageView
+                style="@style/icon"
+                android:src="@drawable/ic_shield" />
+
+            <EditText
+                android:id="@+id/input_def_chance"
+                style="@style/inputEditText"
+                android:layout_width="@dimen/define_edit_text_row_length"
+                android:layout_height="wrap_content"
+                android:hint="@string/chance"
+                android:inputType="number" />
+
+            <ImageView
+                style="@style/icon"
+                android:src="@drawable/ic_energy" />
+
+            <EditText
+                android:id="@+id/input_def_times"
+                style="@style/inputEditText"
+                android:layout_width="@dimen/define_edit_text_row_length"
+                android:layout_height="wrap_content"
+                android:hint="@string/times"
+                android:inputType="number" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/inputLabel"
+                android:text="@string/health" />
+
+            <ImageView
+                style="@style/icon"
+                android:src="@drawable/ic_heart" />
+
+            <EditText
+                android:id="@+id/input_hp"
+                style="@style/inputEditText"
+                android:layout_width="@dimen/define_edit_text_row_length"
+                android:layout_height="wrap_content"
+                android:hint="@string/amount"
+                android:inputType="number" />
+
+            <ImageView
+                style="@style/icon"
+                android:src="@drawable/ic_helmet" />
+
+            <EditText
+                android:id="@+id/input_armor"
+                style="@style/inputEditText"
+                android:layout_width="@dimen/define_edit_text_row_length"
+                android:layout_height="wrap_content"
+                android:hint="@string/armor"
+                android:inputType="number" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/defence" />
-
-        <EditText
-            android:id="@+id/input_def_chance"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/chance"
-            android:inputType="number" />
-
-        <EditText
-            android:id="@+id/input_def_times"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/times"
-            android:inputType="number" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/health" />
-
-        <EditText
-            android:id="@+id/input_hp"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/amount"
-            android:inputType="number" />
-
-        <EditText
-            android:id="@+id/input_armor"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/armor"
-            android:inputType="number" />
-
-    </LinearLayout>
-
-</LinearLayout>
+</android.support.v7.widget.CardView>

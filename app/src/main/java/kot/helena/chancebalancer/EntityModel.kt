@@ -3,6 +3,7 @@ package kot.helena.chancebalancer
 import java.io.Serializable
 
 class EntityModel : Serializable {
+    var unique: Boolean = true
     var name: String = ""
     var attackChance: Int = 0
     var attackDamage: Int = 0

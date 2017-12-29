@@ -8,4 +8,34 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name = "android:windowActionBar">false</item>
+        <item name = "android:windowNoTitle">true</item>
+    </style>
+
+    <style name="textContainer">
+        <item name="android:layout_marginTop">@dimen/margin_text_vertical</item>
+        <item name="android:layout_marginBottom">@dimen/margin_text_vertical</item>
+        <item name="android:layout_marginLeft">@dimen/margin_text_horizontal</item>
+        <item name="android:layout_marginRight">@dimen/margin_text_horizontal</item>
+    </style>
+
+    <style name="inputLabel">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">@dimen/define_label_row_length</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="inputEditText">
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+    </style>
+
+    <style name="icon">
+        <item name="android:tint">@color/colorPrimaryDark</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_width">@dimen/icon_size</item>
+        <item name="android:layout_height">@dimen/icon_size</item>
+    </style>
+
 </resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="margin_component">6dp</dimen>
+    <dimen name="margin_text_horizontal">20dp</dimen>
+    <dimen name="margin_text_vertical">10dp</dimen>
+
+    <dimen name="define_label_row_length">65dp</dimen>
+    <dimen name="define_edit_text_row_length">85dp</dimen>
+    <dimen name="icon_size">24dp</dimen>
+
+</resources>
