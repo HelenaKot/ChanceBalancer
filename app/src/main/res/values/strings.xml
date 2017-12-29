@@ -13,4 +13,5 @@
     <string name="ok">OK</string>
     <string name="save_name">saved_entities</string>
     <string name="delete">delete</string>
+    <string name="wipe">wipe</string>
 </resources>

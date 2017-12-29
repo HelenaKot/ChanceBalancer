@@ -26,12 +26,20 @@ object EntityRW {
     }
 
     fun loadEntities(context: Context): List<EntityModel> {
-        val fis: FileInputStream = context.openFileInput(context.getString(R.string.save_name))
-        val ois = ObjectInputStream(fis)
-        val output: List<EntityModel> = ois.readObject() as List<EntityModel>
-        ois.close()
-        fis.close()
-        return output
+        return try {
+            val fis: FileInputStream = context.openFileInput(context.getString(R.string.save_name))
+            val ois = ObjectInputStream(fis)
+            val output: List<EntityModel> = ois.readObject() as List<EntityModel>
+            ois.close()
+            fis.close()
+            output
+        } catch (e: Throwable) {
+            emptyList()
+        }
+    }
+
+    fun wipeEntities(context: Context) {
+        context.deleteFile(context.getString(R.string.save_name))
     }
 
 }

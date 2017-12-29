@@ -4,7 +4,6 @@ import android.view.MenuItem
 import kot.helena.chancebalancer.R
 
 class SelectEntityPresenter {
-    private var deleteMode = false
     var ui: SelectEntityUI? = null
 
     fun menuOptionSelected(item: MenuItem): Boolean {
@@ -13,14 +12,14 @@ class SelectEntityPresenter {
         }
         when (item.itemId) {
             R.id.action_new -> ui!!.startDefineEntityActivity()
-            R.id.action_delete -> ui!!.startDeleteMode()
+            R.id.action_wipe -> ui!!.wipeData()
         }
         return true
     }
 
     interface SelectEntityUI {
         fun startDefineEntityActivity()
-        fun startDeleteMode()
+        fun wipeData()
     }
 
 }

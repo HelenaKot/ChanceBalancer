@@ -13,6 +13,7 @@ class DisplayEntityAdapter : RecyclerView.Adapter<DisplayEntityAdapter.EntityVie
 
     fun setData(data: List<EntityModel>) {
         this.data = data
+        notifyDataSetChanged()
     }
 
     fun isEmpty(): Boolean {

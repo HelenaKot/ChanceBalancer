@@ -60,8 +60,9 @@ class SelectEntityActivity : AppCompatActivity(), SelectEntityPresenter.SelectEn
         startActivity(Intent(this, DefineEntityActivity::class.java))
     }
 
-    override fun startDeleteMode() {
-
+    override fun wipeData() {
+        EntityRW.wipeEntities(this)
+        refreshAdapterData()
     }
 
 }
