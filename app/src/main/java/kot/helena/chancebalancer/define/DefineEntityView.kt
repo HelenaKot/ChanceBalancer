@@ -1,18 +1,18 @@
 package kot.helena.chancebalancer.define
 
 import android.content.Context
-import android.support.v7.widget.CardView
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.EditText
+import android.widget.FrameLayout
 import kot.helena.chancebalancer.EntityModel
 import kot.helena.chancebalancer.R
 import kotlinx.android.synthetic.main.define_entity_view.view.*
 
 class DefineEntityView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyle: Int = 0)
-    : CardView(context, attrs, defStyle) {
+    : FrameLayout(context, attrs, defStyle) {
     private val nameField: EditText by lazy { input_name }
     private val attackChanceField: EditText by lazy { input_atk_chance }
     private val attackDamageField: EditText by lazy { input_atc_dmg }

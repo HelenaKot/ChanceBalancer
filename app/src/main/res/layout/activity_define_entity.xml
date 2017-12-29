@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundGray"
     tools:context="kot.helena.chancebalancer.display.SelectEntityActivity">
 
     <LinearLayout
@@ -14,21 +16,37 @@
             android:id="@+id/entity_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_component"
+            android:animateLayoutChanges="true"
             android:orientation="vertical" />
 
-        <Button
-            android:id="@+id/add_entity_button"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right|end"
-            android:text="@string/add" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/finish_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right|end"
-            android:text="@string/ok" />
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/add_entity_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_component"
+                android:src="@drawable/ic_add"
+                app:backgroundTint="@color/colorPrimary" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/finish_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_component"
+                android:src="@drawable/ic_done"
+                app:backgroundTint="@color/limeGreen" />
+
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
