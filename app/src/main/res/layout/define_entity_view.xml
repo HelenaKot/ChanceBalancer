@@ -41,7 +41,7 @@
                 android:text="@string/attack" />
 
             <ImageView
-                style="@style/icon"
+                style="@style/inputIcon"
                 android:src="@drawable/ic_crosshair" />
 
             <EditText
@@ -53,7 +53,7 @@
                 android:inputType="number" />
 
             <ImageView
-                style="@style/icon"
+                style="@style/inputIcon"
                 android:src="@drawable/ic_sword" />
 
             <EditText
@@ -75,7 +75,7 @@
                 android:text="@string/defence" />
 
             <ImageView
-                style="@style/icon"
+                style="@style/inputIcon"
                 android:src="@drawable/ic_shield" />
 
             <EditText
@@ -87,7 +87,7 @@
                 android:inputType="number" />
 
             <ImageView
-                style="@style/icon"
+                style="@style/inputIcon"
                 android:src="@drawable/ic_energy" />
 
             <EditText
@@ -109,7 +109,7 @@
                 android:text="@string/health" />
 
             <ImageView
-                style="@style/icon"
+                style="@style/inputIcon"
                 android:src="@drawable/ic_heart" />
 
             <EditText
@@ -121,7 +121,7 @@
                 android:inputType="number" />
 
             <ImageView
-                style="@style/icon"
+                style="@style/inputIcon"
                 android:src="@drawable/ic_helmet" />
 
             <EditText

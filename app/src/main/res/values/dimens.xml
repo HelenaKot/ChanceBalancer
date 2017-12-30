@@ -8,5 +8,7 @@
     <dimen name="define_label_row_length">65dp</dimen>
     <dimen name="define_edit_text_row_length">85dp</dimen>
     <dimen name="icon_size">24dp</dimen>
+    <dimen name="mini_icon_size">16dp</dimen>
+    <dimen name="show_stat_field_length">40dp</dimen>
 
 </resources>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -9,95 +9,127 @@
 
     </data>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginBottom="@dimen/margin_component"
+        android:layout_marginLeft="@dimen/margin_component"
+        android:layout_marginRight="@dimen/margin_component">
 
-        <TextView
-            android:id="@+id/input_name"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="@{model.name}" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_text_vertical">
 
             <TextView
-                android:layout_width="0dp"
+                android:id="@+id/input_name"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/attack" />
+                android:layout_marginBottom="@dimen/margin_component"
+                android:background="@color/backgroundTeal"
+                android:paddingBottom="@dimen/margin_component"
+                android:paddingLeft="@dimen/margin_text_horizontal"
+                android:paddingRight="@dimen/margin_text_horizontal"
+                android:paddingTop="@dimen/margin_text_vertical"
+                android:text="@{model.name}"
+                tools:text="Name" />
 
-            <TextView
-                android:id="@+id/input_atk_chance"
-                android:layout_width="0dp"
+            <LinearLayout
+                style="@style/displayRow"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@{Integer.toString(model.attackChance)}" />
+                android:layout_marginBottom="@dimen/margin_component">
 
-            <TextView
-                android:id="@+id/input_atc_dmg"
-                android:layout_width="0dp"
+                <TextView
+                    style="@style/inputLabel"
+                    android:text="@string/attack" />
+
+                <ImageView
+                    style="@style/displayIcon"
+                    android:src="@drawable/ic_crosshair" />
+
+                <TextView
+                    android:id="@+id/input_atk_chance"
+                    style="@style/displayLabel"
+                    android:text="@{Integer.toString(model.attackChance)}"
+                    tools:text="10" />
+
+                <ImageView
+                    style="@style/displayIcon"
+                    android:src="@drawable/ic_sword" />
+
+                <TextView
+                    android:id="@+id/input_atc_dmg"
+                    style="@style/displayLabel"
+                    android:text="@{Integer.toString(model.attackDamage)}"
+                    tools:text="10" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/displayRow"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@{Integer.toString(model.attackDamage)}" />
+                android:layout_marginBottom="@dimen/margin_component">
+
+                <TextView
+                    style="@style/inputLabel"
+                    android:text="@string/defence" />
+
+                <ImageView
+                    style="@style/displayIcon"
+                    android:src="@drawable/ic_shield" />
+
+                <TextView
+                    android:id="@+id/input_def_chance"
+                    style="@style/displayLabel"
+                    android:text="@{Integer.toString(model.defenceChance)}"
+                    tools:text="10" />
+
+                <ImageView
+                    style="@style/displayIcon"
+                    android:src="@drawable/ic_energy" />
+
+                <TextView
+                    android:id="@+id/input_def_times"
+                    style="@style/displayLabel"
+                    android:text="@{Integer.toString(model.defenceTimes)}"
+                    tools:text="10" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/displayRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/inputLabel"
+                    android:text="@string/health" />
+
+                <ImageView
+                    style="@style/displayIcon"
+                    android:src="@drawable/ic_heart" />
+
+                <TextView
+                    android:id="@+id/input_hp"
+                    style="@style/displayLabel"
+                    android:text="@{Integer.toString(model.health)}"
+                    tools:text="10" />
+
+                <ImageView
+                    style="@style/displayIcon"
+                    android:src="@drawable/ic_helmet" />
+
+                <TextView
+                    android:id="@+id/input_armor"
+                    style="@style/displayLabel"
+                    android:text="@{Integer.toString(model.armor)}"
+                    tools:text="10" />
+
+            </LinearLayout>
 
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/defence" />
-
-            <TextView
-                android:id="@+id/input_def_chance"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@{Integer.toString(model.defenceChance)}" />
-
-            <TextView
-                android:id="@+id/input_def_times"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@{Integer.toString(model.defenceTimes)}" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/health" />
-
-            <TextView
-                android:id="@+id/input_hp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@{Integer.toString(model.health)}" />
-
-            <TextView
-                android:id="@+id/input_armor"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@{Integer.toString(model.armor)}" />
-
-        </LinearLayout>
-
-    </LinearLayout>
+    </android.support.v7.widget.CardView>
 </layout>

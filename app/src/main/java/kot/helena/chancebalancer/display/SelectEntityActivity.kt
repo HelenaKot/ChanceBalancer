@@ -10,7 +10,7 @@ import android.view.MenuItem
 import kot.helena.chancebalancer.R
 import kot.helena.chancebalancer.define.DefineEntityActivity
 import kot.helena.chancebalancer.utils.EntityRW
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_display_entity.*
 
 class SelectEntityActivity : AppCompatActivity(), SelectEntityPresenter.SelectEntityUI {
     private val recyclerView: RecyclerView by lazy { recycler_view }
@@ -19,7 +19,7 @@ class SelectEntityActivity : AppCompatActivity(), SelectEntityPresenter.SelectEn
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_display_entity)
         initRecyclerView()
         if (adapter.isEmpty()) {
             startDefineEntityActivity()

@@ -10,6 +10,7 @@
 
     <color name="backgroundGray">#e1e2e1</color>
     <color name="backgroundLightGray">#f5f5f6</color>
+    <color name="backgroundTeal">#e0f2f1</color>
 
     <color name="black">#000</color>
     <color name="white">#fff</color>

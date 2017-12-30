@@ -9,8 +9,8 @@
     </style>
 
     <style name="AppTheme.NoActionBar" parent="AppTheme">
-        <item name = "android:windowActionBar">false</item>
-        <item name = "android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
 
     <style name="textContainer">
@@ -18,6 +18,25 @@
         <item name="android:layout_marginBottom">@dimen/margin_text_vertical</item>
         <item name="android:layout_marginLeft">@dimen/margin_text_horizontal</item>
         <item name="android:layout_marginRight">@dimen/margin_text_horizontal</item>
+    </style>
+
+    <style name="displayRow">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/margin_text_horizontal</item>
+        <item name="android:paddingRight">@dimen/margin_text_horizontal</item>
+    </style>
+
+    <style name="displayLabel">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">@dimen/show_stat_field_length</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="displayIcon">
+        <item name="android:tint">@color/colorPrimaryDark</item>
+        <item name="android:layout_width">@dimen/mini_icon_size</item>
+        <item name="android:layout_height">@dimen/mini_icon_size</item>
+        <item name="android:layout_marginRight">@dimen/margin_component</item>
     </style>
 
     <style name="inputLabel">
@@ -31,7 +50,7 @@
         <item name="android:layout_marginLeft">5dp</item>
     </style>
 
-    <style name="icon">
+    <style name="inputIcon">
         <item name="android:tint">@color/colorPrimaryDark</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:layout_width">@dimen/icon_size</item>
