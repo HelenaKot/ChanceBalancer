@@ -1,18 +1,14 @@
 package kot.helena.chancebalancer.display
 
 import android.support.v7.widget.RecyclerView
-import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import kot.helena.chancebalancer.EntityModel
-import kot.helena.chancebalancer.databinding.DisplayEntityViewBinding
-import kotlin.properties.Delegates
 
-class DisplayEntityAdapter : RecyclerView.Adapter<DisplayEntityAdapter.EntityViewHolder>() {
-    private var data: List<EntityModel> = ArrayList()
+class DisplayEntityAdapter : RecyclerView.Adapter<EntityViewHolder>() {
+    private var data: List<EntityModelWrapper> = ArrayList()
 
     fun setData(data: List<EntityModel>) {
-        this.data = data
+        this.data = data.map { datum -> EntityModelWrapper(datum) }
         notifyDataSetChanged()
     }
 
@@ -21,29 +17,20 @@ class DisplayEntityAdapter : RecyclerView.Adapter<DisplayEntityAdapter.EntityVie
     }
 
     override fun onBindViewHolder(holder: EntityViewHolder, position: Int) {
-        holder.bind(data[position])
+        holder.bind(data[position].model)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EntityViewHolder {
-        val view = DisplayEntityViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return EntityViewHolder(view)
+        return EntityViewHolder(EntityViewHolder.createBinding(parent))
     }
 
     override fun getItemCount(): Int {
         return data.size
     }
 
-    class EntityViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
-        private var binding: DisplayEntityViewBinding by Delegates.notNull()
-
-        constructor(binding: DisplayEntityViewBinding) : this(binding.root) {
-            this.binding = binding
-        }
-
-        fun bind(model: EntityModel) {
-            binding.model = model
-            binding.executePendingBindings()
-        }
+    class EntityModelWrapper constructor(val model: EntityModel) {
+        var selectedLeft = false
+        var selectedRight = false
     }
 
 }
